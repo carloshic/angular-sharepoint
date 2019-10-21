@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "serve": "node src/server.js"
   },
   "private": true,
   "dependencies": {
@@ -21,7 +22,11 @@
     "@angular/router": "~8.2.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
-    "zone.js": "~0.9.1"
+    "zone.js": "~0.9.1",
+    "@pnp/common": "^1.0.3",
+    "@pnp/logging": "^1.0.3",
+    "@pnp/odata": "^1.0.3",
+    "@pnp/sp": "^1.0.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.802.1",
@@ -42,6 +47,7 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
-    "typescript": "~3.5.3"
+    "typescript": "~3.5.3",
+    "sp-rest-proxy": "^2.5.6"
   }
 }

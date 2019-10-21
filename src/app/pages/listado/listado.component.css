@@ -1,0 +1,15 @@
+.text-left {
+    text-align: left;
+}
+
+table {
+    width: 600px;
+}
+
+table thead tr th {
+    border: 1px solid rgb(21, 80, 21);
+}
+
+table tr td {
+    border: 1px solid gray;
+}

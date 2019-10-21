@@ -1,0 +1,25 @@
+<h5>Listado</h5>
+<table>
+    <thead>
+        <tr >
+            <th class="text-left">Nombre</th>
+            <th class="text-left">Edad</th>
+            <th class="text-left">Telefono</th>
+            <th class="text-left">Email</th>
+            <th colspan="2">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr (click)="click(item)" class="text-left" *ngFor="let item of list">
+            <td>{{ item.nombrecompleto }}</td>
+            <td>{{ item.edad }}</td>
+            <td>{{ item.telefono }}</td>
+            <td>{{ item.email }}</td>
+            <td><button (click)="eliminar(item.Id)">Eliminar</button></td>
+            <td><button type="button" (click)="editar(item.Id)">Editar</button></td>
+            <!-- <td><a [routerLink]="['/persona', item.Id]" routerLinkActive="router-link-active">Editar</a></td> -->
+        </tr>
+    </tbody>
+</table>
+
+<button (click) ="nuevo()">Nuevo</button>

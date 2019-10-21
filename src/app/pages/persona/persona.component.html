@@ -1,0 +1,23 @@
+<h5 *ngIf="esNuevo">Nueva Persona</h5>
+<h5 *ngIf="!esNuevo">Editar Persona</h5>
+<form ngNativeValidate #f="ngForm" (ngSubmit)="guardar()">
+    <table>
+        <tr>
+            <td>Nombre</td>
+            <td><input required name="nombrecompleto" type="text" [(ngModel)]="persona.nombrecompleto"></td>
+        </tr>
+        <tr>
+            <td>Edad</td>
+            <td><input required name="edad" type="number" [(ngModel)]="persona.edad" max="130"></td>
+        </tr>
+        <tr>
+            <td>Telefono</td>
+            <td><input required name="telefono" type="number" [(ngModel)]="persona.telefono" max="9999999999"></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input required name="email" type="email" [(ngModel)]="persona.email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"></td>
+        </tr>
+    </table>
+    <button type="submit" [attr.disabled]="f.valid ? null: true">Guardar</button>
+</form>
